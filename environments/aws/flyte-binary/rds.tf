@@ -21,7 +21,7 @@ module "flyte_db" {
   random_password_length = 63
 
 #Uncomment and update the value to set a specific password for the DB.
-  #master_password = "my-db-password"
+  master_password = "kendra1234"
   
  
 

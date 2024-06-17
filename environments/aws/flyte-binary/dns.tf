@@ -1,11 +1,11 @@
 
  data "aws_route53_zone" "zone" {
-  name = "example.run."  # Change this to your Route53 managed zone
+  name = "kendralabs.net"  # Change this to your Route53 managed zone
 }
 
 resource "aws_route53_record" "cname_record" {
   zone_id = data.aws_route53_zone.zone.zone_id
-  name    = "change-me"  # Replace with your desired subdomain
+  name    = "flyte"  # Replace with your desired subdomain
   type    = "CNAME"
   ttl     = 300  # Time to Live in seconds
 
@@ -15,7 +15,7 @@ resource "aws_route53_record" "cname_record" {
 }
 # Change domain_name to match the name you'll use to connect to Flyte
 resource "aws_acm_certificate" "flyte_cert" {
-  domain_name       = "flyte.example.run"
+  domain_name       = "flyte.kendralabs.net"
   validation_method = "DNS"
 
   lifecycle {

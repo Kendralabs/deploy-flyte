@@ -1,5 +1,5 @@
 locals {
-  project     = "flyte"
+  project     = "kendralyte" 
   environment = "terraform" 
   name_prefix = "${local.project}-${local.environment}"
   region      = data.aws_region.current.name
